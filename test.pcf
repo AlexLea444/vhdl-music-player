@@ -1,0 +1,6 @@
+# Inputs
+
+# Outputs
+set_io -nowarn sound_out 2      # Pin for speaker
+set_io -nowarn fast_counter 46
+set_io -nowarn slow_counter 47
