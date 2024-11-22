@@ -1,5 +1,5 @@
 # This code was stolen from Lucas Polidori. I will ask his permission at some point
-PROGRAM_NAME="test"
+PROGRAM_NAME="full_song"
 echo "Building with ${PROGRAM_NAME}"
 
 # Clean

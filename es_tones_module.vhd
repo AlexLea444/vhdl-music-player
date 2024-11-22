@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity tones is
     port(
-        input_clk       : in  std_logic; -- Must be 48 MHz
+        clk       : in  std_logic; -- Must be 48 MHz
         sound_ch_en     : in std_logic;
         sound_ch_T      : in unsigned(25 downto 0);  
         --T = clk / (2 * f), where f is the frequency of the desired sound
@@ -20,8 +20,8 @@ signal pitch      : std_logic := '0';
 
 begin
 
-    process (input_clk) begin
-        if rising_edge (input_clk) then
+    process (clk) begin
+        if rising_edge (clk) then
             if counter = sound_ch_T then
                 counter <= 26d"0";
                 if sound_ch_T > 0 then
